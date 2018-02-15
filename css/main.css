@@ -68,3 +68,18 @@
 .icon, .flecha, .predic {
   width: 10%;
 }
+
+.week {
+  display: inline-block;
+  background-color: gray;
+  margin: 0.5em;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: bold;
+    margin-left: 3rem;
+}
+
+.week p {
+  margin-top: 1.5rem;
+
+}

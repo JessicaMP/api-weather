@@ -1,14 +1,15 @@
-const permit = document.getElementById("home");
-const button = document.getElementById('btnStar');
-
+const permit = $("#home");
+const button = $('#btnStar');
+const containerWeek = $('#containerWeek');
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
-        //window.location.href = 'prediction.html';
     } else {
       alert("Geolocation is not supported by this browser.");
     }
 };
+
+let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
 function showPosition(position) {
   var lat = position.coords.latitude;
@@ -29,10 +30,6 @@ function showPosition(position) {
 function nextPage() {
   window.location.href = 'views/prediction.html';
 };
-
-button.addEventListener('click', nextPage);
-
-window.addEventListener('load', getLocation);
 
 function handleError() {
   console.log('Se ha presentado un error');
@@ -65,6 +62,18 @@ function timeWeather() {
     summary.text(today.summary);
     pressure.text(today.pressure + 'hPa');
 
+    let array = week.slice(0, 7);
+    array.forEach((element, index) => {
+      let min = element.temperatureMin;
+      let max = element.temperatureMax;
+      let box = `<div class = "week center col s11 l5">
+    <div class="col l2 s2"><img class="responsive-img" src="../assets/images/seasons/${element.icon}.png"></div>
+    <div class="col l4 s4"><p>${days[index]}</p></div>
+    <div class="col l2 s2"><p>${celsius(min)}°</p></div>
+    <div class="col l2 s2"><p>${celsius(max)}°</p></div>
+    </div>`;
+      containerWeek.append(box);
+    });
 }
 
 function celsius(e) {
@@ -72,3 +81,7 @@ function celsius(e) {
   var result = num.toFixed(2);
   return result;
 };
+
+$('button').click(nextPage);
+
+$(document).ready(getLocation);
