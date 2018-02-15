@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+}
+
+#home {
+  width: 100%;
+  background-image: url('../assets/images/back.jpg');
+  background-size: cover;
+  min-height:100%;
+  position:absolute;
+}
+
+ h1 {
+   color: white;
+   font-weight: bold;
+   padding: 2rem;
+   font-size: 60px;
+ }
+
+.box {
+  width: 100%;
+  text-align: center;
+}
+
+#btnStar {
+  display: inline-block;
+  background-color: #f8b;
+  color: white;
+  border-radius: 0.5rem;
+  width: 250px;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0.3rem;
+}
+
+.box-info {
+  width: 100%;
+  position: relative;
+}
+
+.style-box {
+  display: inline-block;
+  width: 45%;
+}
+
+.box-info:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  background-color: black;
+}
+
+.style-box p {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  text-shadow: 1px 1px black;
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+.icon, .flecha, .predic {
+  width: 10%;
+}
