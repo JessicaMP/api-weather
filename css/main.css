@@ -10,7 +10,7 @@
   position:absolute;
 }
 
- h1 {
+ h1, h2 {
    color: white;
    font-weight: bold;
    padding: 2rem;
@@ -20,6 +20,8 @@
 .box {
   width: 100%;
   text-align: center;
+  position: absolute;
+  bottom: 0.5rem;
 }
 
 #btnStar {
@@ -35,13 +37,15 @@
 }
 
 .box-info {
-  width: 100%;
-  position: relative;
+  width: 90%;
+  position: absolute;
 }
 
 .style-box {
   display: inline-block;
   width: 45%;
+  position: relative;
+  height: auto;
 }
 
 .box-info:before {
@@ -56,33 +60,104 @@
   background-color: black;
 }
 
+.box-info h4,  .box-info img, .box img, h3 {
+  position: relative;
+}
+
 .style-box p {
   color: white;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 36px;
   text-shadow: 1px 1px black;
   display: inline-block;
   padding: 0 1rem;
+}
+
+.box-info h4 {
+  font-size: 40px;
+  margin-top: 2rem;
 }
 
 .icon, .flecha, .predic {
   width: 10%;
 }
 
+.left {
+  padding-left: 120px;
+}
+
 .week {
   display: inline-block;
-  background-color: gray;
-  margin: 0.5em;
+  background: rgba(0, 0, 0, 0.8);
+  margin: 1rem;
   box-sizing: border-box;
   font-size: 1rem;
   font-weight: bold;
-    margin-left: 3rem;
+  margin-left: 3rem;
+  padding: 5px;
+  color: white;
 }
 
 .week p {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
-.btn-space {
+.btnReturn {
+  display: inline-block;
+}
+
+.week-back {
+  background-image: url('../assets/images/back1.jpg');
+  background-size: cover;
+  min-height: 100%;
+  position: absolute;
   width: 100%;
 }
+
+.predictWeek {
+  display: inline-block;
+  margin: 1rem;
+}
+
+ @media (min-width:992px) {
+   .week {
+     display: inline-block;
+     background: rgba(0, 0, 0, 0.8);
+     margin: 1rem;
+     box-sizing: border-box;
+     font-size: 1rem;
+     font-weight: bold;
+     margin-left: 3rem;
+     padding: 5px;
+     color: white;
+   }
+
+   .flex {
+     display: -webkit-flex;
+     -webkit-flex-direction: row;
+     display: flex;
+     flex-direction: row;
+   }
+
+   .flex > div {
+     webkit-flex: 1 1 auto;
+      flex: 1 1 auto;
+   }
+
+   .left {
+     padding-left: 0;
+   }
+
+   .box-info {
+     width: 70%;
+   }
+
+   .style-box p {
+     color: white;
+     font-weight: bold;
+     font-size: 16px;
+     text-shadow: 1px 1px black;
+     display: inline-block;
+     padding: 0 1rem;
+   }
+ }
