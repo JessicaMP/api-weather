@@ -81,5 +81,8 @@
 
 .week p {
   margin-top: 1.5rem;
+}
 
+.btn-space {
+  width: 100%;
 }
