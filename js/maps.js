@@ -67,7 +67,7 @@ function timeWeather() {
       let min = element.temperatureMin;
       let max = element.temperatureMax;
       let box = `<div class = "week center col s11 l5 z-depth-5">
-    <div class="col l2 s2"><img class="responsive-img" src="../assets/images/seasons/${element.icon}.png"></div>
+    <div class="col l2 s2"><img class="responsive-img" src="../assets/images/seasons/${element.icon}.PNG"></div>
     <div class="col l4 s4"><p>${days[index]}</p></div>
     <div class="col l2 s2"><p>${celsius(min)}°</p></div>
     <div class="col l2 s2"><p>${celsius(max)}°</p></div>
